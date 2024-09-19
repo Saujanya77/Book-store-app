@@ -1,36 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    const [theme, setTheme] = useState('light'); // Initial theme is 'light'
-
-    const toggleTheme = () => {
-        setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
-    };
-
     return (
-        <div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
-            <nav className={`navbar navbar-expand-lg ${theme === 'light' ? 'bg-body-tertiary text-dark' : 'bg-dark text-white'}`}>
+        <div>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary text-dark">
                 <div className="container">
-                    <a className="navbar-brand" href="#">BiblioHEAVEN.</a>
+                    <Link className="navbar-brand" to="/">BiblioHEAVEN.</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Books</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Add books</a>
-                            </li>
-                            <li className="nav-item">
-                                <button className="btn btn-outline-secondary" onClick={toggleTheme}>
-                                    Toggle Theme
-                                </button>
-                            </li>
+                            <Link className="nav-item nav-link active" to="/">
+                                Home</Link>
+
+                            <Link className="nav-item nav-link" to="/books">Books</Link>
+
+                            <Link className="nav-item nav-link" to="/addbooks">Add books</Link>
                         </ul>
                     </div>
                 </div>
