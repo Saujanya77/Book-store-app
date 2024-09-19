@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-const cors=require("cors");
+import cors from 'cors'
 const port = 1000;
 import bookRoute from "./routes/bookRoutes.js"
 import './connection/connection.js';

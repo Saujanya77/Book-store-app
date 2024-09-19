@@ -5,7 +5,7 @@ const Books = () => {
   useEffect(() => {
     const fetch=async()=>{
       await axios
-      .get("http://localhost:1000/api/vi/getBooks")
+      .get("http://localhost:1000/api/v1/getBooks")
       .then((res)=>console.log(res));
 
     };
