@@ -29,8 +29,6 @@ const Books = () => {
         )}
     </div>
   )
-}
-
   return (
     <div className="bg-dark" style={{ minHeight: "91.5vh" }}>
       <div className="d-flex justify-content-center align-items-center py-3">
@@ -38,5 +36,5 @@ const Books = () => {
       </div>
     </div>
   );
-
+}
 export default Books;
